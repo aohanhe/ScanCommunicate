@@ -1,4 +1,5 @@
 rootProject.name = 'ScanCommunicate'
+
 includeFlat 'ScanBisServer','jpaQueryHelper','swallowIotServer'
 project(':jpaQueryHelper').projectDir = new File(settingsDir,'../../../jpaQueryHelper')
 project(':ScanBisServer').projectDir = new File(settingsDir,'../../ScanBisServer/ScanBisServer')
