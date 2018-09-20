@@ -56,7 +56,7 @@ public class Is1Dispatcher {
 			// 更新当前session对应的设备号
 			serverAdapter.setSessionDeviceCode(session, deviceCode);
 			var device = deviceService.findItemByCode(deviceCode);
-			device.setStatus((byte) 1);
+			device.setStatus(true);
 			device = deviceService.saveItem(device);
 			var response = new Is1RegisterCommand();
 			// 验证结果,0：失败，1：成功
