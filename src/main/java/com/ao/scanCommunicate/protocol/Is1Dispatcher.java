@@ -4,6 +4,7 @@ import org.apache.mina.core.session.IoSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.Assert;
 
 import com.ao.scanCommunicate.protocol.packetdown.Is1HeartbeatResponseCommand;
 import com.ao.scanCommunicate.protocol.packetdown.Is1RegisterCommand;
@@ -13,17 +14,23 @@ import com.ao.scanCommunicate.protocol.packetup.Is1BillResponse;
 import com.ao.scanCommunicate.protocol.packetup.Is1ChargeResponse;
 import com.ao.scanCommunicate.protocol.packetup.Is1FaultResponse;
 import com.ao.scanCommunicate.protocol.packetup.Is1FinishResponse;
-import com.ao.scanCommunicate.protocol.packetup.Is1HeartbeatResponse;
-import com.ao.scanCommunicate.protocol.packetup.Is1RegisterResponse;
+import com.ao.scanCommunicate.protocol.packetup.Is1HeartbeatRequest;
+import com.ao.scanCommunicate.protocol.packetup.Is1RegisterRequest;
 import com.ao.scanCommunicate.protocol.packetup.Is1ResumeResponse;
-import com.ao.scanCommunicate.protocol.packetup.Is1StateResponse;
+import com.ao.scanCommunicate.protocol.packetup.Is1StateRequest;
 import com.ao.scanCommunicate.protocol.packetup.Is1SuccessResponse;
 import com.ao.scanElectricityBis.service.DeviceService;
+import com.ao.scanElectricityBis.service.ExpensesService;
+import com.ao.scanElectricityBis.service.PlugInfoService;
+import com.mysema.commons.lang.Pair;
 
 import ahh.swallowIotServer.ServerIoHandlerAdapter;
 import ahh.swallowIotServer.dispatcher.OnUpMessage;
 import ahh.swallowIotServer.dispatcher.ProtocolDispatcher;
 import ahh.swallowIotServer.exception.IotServerException;
+import ahh.swallowIotServer.session.SessionInfo;
+import reactor.core.publisher.Flux;
+import reactor.util.function.Tuple2;
 
 /**
  * 智能插座（Intelligent Socket 1.0）的上行消息处理器
@@ -39,6 +46,12 @@ public class Is1Dispatcher {
 	private ServerIoHandlerAdapter serverAdapter;
 	@Autowired
 	private DeviceService deviceService;
+	
+	@Autowired
+	private PlugInfoService plugInfoService;
+	
+	@Autowired
+	private ExpensesService expensesService;
 
 	/**
 	 * 注册TCP总机上行
@@ -48,7 +61,7 @@ public class Is1Dispatcher {
 	 * @throws IotServerException
 	 */
 	@OnUpMessage(value = Is1GlobalConst.REGISTER_RESPONSE)
-	public void onRegisterResponse(IoSession session, Is1RegisterResponse cmd) throws IotServerException {
+	public void onRegisterResponse(IoSession session, Is1RegisterRequest cmd) throws IotServerException {
 		try {
 			logger.info("====================>注册TCP总机上行包，session=" + session.getId());
 
@@ -56,20 +69,41 @@ public class Is1Dispatcher {
 			// 更新当前session对应的设备号
 			serverAdapter.setSessionDeviceCode(session, deviceCode);
 			var device = deviceService.findItemByCode(deviceCode);
-			device.setStatus(true);
-			device = deviceService.saveItem(device);
+			//把设备ID放在扩展数据中
+			SessionInfo.bindSessionExtedDataToSession(session, new ExtendSessionData(device.getId()));
+			
+			deviceService.updateDeviceStatus(device.getId(), DeviceService.DeviceStatus_OnLine);
+			
 			var response = new Is1RegisterCommand();
 			// 验证结果,0：失败，1：成功
 			response.setAuthResult((byte) 1);
-
 			// 向设备回复指令
 			session.write(response);
 
-			logger.info("====================> 注册TCP总机下行包，session=" + session.getId());
+			logger.info("====================> 注册TCP总机上行包，session=" + session.getId()+" deivceCode"+cmd.getDeviceCode());
 
 		} catch (Exception e) {
 			logger.error("====================> 注册TCP总机上行业务处理出错！！！" + e.getMessage(), e);
 		}
+	}
+	
+	/**
+	 * 从session中取得设备ID
+	 * @param session
+	 * @return
+	 */
+	private int getSessionDeviceId(IoSession session) {
+		return ((ExtendSessionData)SessionInfo.getSessionExtedData(session)).getDeviceId();
+	}
+	
+	private int getSessionBillId(IoSession session,int index) {
+		return ((ExtendSessionData)SessionInfo.getSessionExtedData(session)).getPlugBillId(index);
+	}
+	/**
+	 * 设置session bill id
+	 */
+	private void setSessionBillId(IoSession session,int index,int billId) {
+		((ExtendSessionData)SessionInfo.getSessionExtedData(session)).setPlugBillId(index, billId);
 	}
 
 	/**
@@ -80,17 +114,29 @@ public class Is1Dispatcher {
 	 * @throws IotServerException
 	 */
 	@OnUpMessage(value = Is1GlobalConst.HEARTBEAT_RESPONSE)
-	public void onHeartbeatResponse(IoSession session, Is1HeartbeatResponse cmd) throws IotServerException {
+	public void onHeartbeatResponse(IoSession session, Is1HeartbeatRequest cmd) throws IotServerException {
 		try {
 			logger.info("====================>心跳上行包，session=" + session.getId());
-
-			// 更新当前session对应的设备号
-			// serverAdapter.setSessionDeviceCode(session, String.valueOf(session.getId()));
-
+			
 			var response = new Is1HeartbeatResponseCommand();
 
 			// 向设备回复指令
 			session.write(response);
+			
+			//更新设备插头的状态
+			int deviceId=getSessionDeviceId(session);
+			
+			
+			short state=cmd.getState();
+			Flux.range(0, cmd.getLen())
+				.map(index->{
+					short bt=(short)(0x01<<(16-1-index));
+					return Pair.of(index, !(bt==0));					
+				}).subscribe(item->{
+					//把所有插头信息状态更新到数据库
+					plugInfoService.updatePlugIsWorking(deviceId, item.getFirst(), 
+							item.getSecond());
+				});			
 
 			logger.info("====================> 心跳下行包，session=" + session.getId());
 
@@ -107,7 +153,7 @@ public class Is1Dispatcher {
 	 * @throws IotServerException
 	 */
 	@OnUpMessage(value = Is1GlobalConst.STATE_RESPONSE)
-	public void onStateResponse(IoSession session, Is1StateResponse cmd) throws IotServerException {
+	public void onStateResponse(IoSession session, Is1StateRequest cmd) throws IotServerException {
 		try {
 			logger.info("====================>状态上行包，session=" + session.getId());
 
@@ -115,6 +161,13 @@ public class Is1Dispatcher {
 
 			// 向设备回复指令
 			session.write(response);
+			
+			//更新设备插头的状态
+			int deviceId=getSessionDeviceId(session);
+			
+			//更新插头的工作状态
+			plugInfoService.updatePlugStatus(deviceId, (int)cmd.getAddr(), (int)cmd.getState());
+			
 
 			logger.info("====================> 状态下行包，session=" + session.getId());
 
@@ -134,11 +187,16 @@ public class Is1Dispatcher {
 	public void onChargeResponse(IoSession session, Is1ChargeResponse cmd) throws IotServerException {
 		try {
 			logger.info("====================> 开始充电上行包，session=" + session.getId());
+			
+			var deivceId=this.getSessionDeviceId(session);
+			
+			
+			
+			var billId=this.getSessionBillId(session, cmd.getAddr());
+			
 
-			// Is1ChargeCommand response = new Is1ChargeCommand(cmd.getAddr(), (short) 2);
-			// session.write(response);
-			//
-			// logger.info("====================> 开始充电上下行包，session=" + session.getId());
+			//设置充电帐单为开始
+			expensesService.upExpenseBillStart(billId);
 
 		} catch (Exception e) {
 			logger.error("====================> 开始充电业务处理出错！！！" + e.getMessage(), e);
@@ -159,6 +217,11 @@ public class Is1Dispatcher {
 			var response = new Is1StopResponseCommand(cmd.getAddr());
 
 			session.write(response);
+			
+			var deivceId=this.getSessionDeviceId(session);			
+			var billId=this.getSessionBillId(session, cmd.getAddr());
+			
+			expensesService.finishExpenseBill(billId,Integer.parseInt(cmd.getMinutes()));
 
 			logger.info("====================> 完成充电下行包，session=" + session.getId());
 
@@ -178,8 +241,10 @@ public class Is1Dispatcher {
 		try {
 			logger.info("====================> 账单上行包，session=" + session.getId());
 
-			// Is1BillCommand response = new Is1BillCommand(cmd.getAddr());
-			// session.write(response);
+			var deivceId=this.getSessionDeviceId(session);			
+			var billId=this.getSessionBillId(session, cmd.getAddr());
+			
+			expensesService.upExpenseBillCost(billId, Integer.parseInt(cmd.getMinutes()));
 
 			logger.info("====================> 账单下行包，session=" + session.getId());
 

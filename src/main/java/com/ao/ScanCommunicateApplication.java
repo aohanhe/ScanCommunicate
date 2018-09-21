@@ -12,8 +12,10 @@ import org.springframework.integration.annotation.IntegrationComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import ahh.swallowIotServer.IotServer;
+import ahh.swallowIotServer.ServerIoHandler;
 import ahh.swallowIotServer.exception.IotServerException;
 import ahh.swallowIotServer.protocol.config.AutoScanIotConfig;
+import ahh.swallowIotServer.session.SessionInfo;
 
 @DependsOn("iotServer")
 @SpringBootApplication
@@ -29,6 +31,8 @@ public class ScanCommunicateApplication {
 	private static Logger logger = LoggerFactory.getLogger(ScanCommunicateApplication.class);
 	@Autowired
 	private IotServer server;
+	@Autowired
+	private ScanCommServerIoHandler handler;
 
 	public static void main(String[] args) throws IotServerException {
 		var context = SpringApplication.run(ScanCommunicateApplication.class, args);
@@ -49,6 +53,13 @@ public class ScanCommunicateApplication {
 		logger.info(SYSTEM_NAME + "启动................................");
 		try {
 			app.server.loadConfig();
+			
+			/**
+			 * 添加处理器来监听session事件
+			 */
+			app.server.setServerIoHandler(app.handler);
+			
+			
 			app.server.init();
 			app.server.StartTcpServer();
 			logger.info(SYSTEM_NAME + "启动完成................................");

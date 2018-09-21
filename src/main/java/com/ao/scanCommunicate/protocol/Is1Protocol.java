@@ -20,13 +20,8 @@ import ahh.swallowIotServer.protocol.hasheader.BaseHasHeaderProtocol;
 @DownHeader(Is1DownHeader.class)
 @ConfirmUpCmdhandler(confirmCmdhandler = Is1ConfirmCmdhandler.class, value = "cmd")
 @ProtocoCrcHandler(value = Is1CrcHandler.class, upCrcFieldName = "crcBit", downCrcFieldName = "crcBit")
-public class Is1Protocol extends BaseHasHeaderProtocol implements IGetProtocolRmControl {
+public class Is1Protocol extends BaseHasHeaderProtocol  {
 	public static short SEQ_NOTSYNC = (short) 0xFFFF;
 
-	private Is1Controller control = new Is1Controller();
-
-	@Override
-	public BaseController getDeviceControl() {
-		return control;
-	}
+	
 }

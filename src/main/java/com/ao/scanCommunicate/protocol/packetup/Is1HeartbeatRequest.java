@@ -18,7 +18,7 @@ import ahh.swallowIotServer.protocol.config.fields.IsWantCrc;
  *
  */
 @UpCommand(name = "心跳上行", protocolId = Is1GlobalConst.IS1_PROTOCOL, value = Is1GlobalConst.HEARTBEAT_RESPONSE)
-public interface Is1HeartbeatResponse extends BaseCommand, Is1UpHeader {
+public interface Is1HeartbeatRequest extends BaseCommand, Is1UpHeader {
 	/**
 	 * 单头个数，决定state字节数组的长度（=len/8+len%8）
 	 * 
