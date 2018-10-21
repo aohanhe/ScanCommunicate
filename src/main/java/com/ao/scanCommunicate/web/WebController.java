@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ao.scanCommunicate.business.BillManger;
 import com.ao.scanCommunicate.protocol.BaseController;
 import com.ao.scanCommunicate.protocol.IGetProtocolRmControl;
 import com.ao.scanElectricityBis.base.ScanElectricityException;
@@ -42,7 +43,6 @@ import ahh.swallowIotServer.session.SessionInfo;
 
 @RestController
 @EnableAutoConfiguration
-@Scope("prototype")
 @RequestMapping("/api/protocols")
 public class WebController {
 	/**
@@ -56,9 +56,7 @@ public class WebController {
 	private ServerIoHandlerAdapter serverAdpter;
 
 	@Autowired
-	private PlugInfoService plugInfoSevice;
-	
-	
+	private PlugInfoService plugInfoSevice;	
 	
 	@Autowired
 	private ExpensesService expensesService;
@@ -68,6 +66,11 @@ public class WebController {
 	
 	@Autowired
 	private BaseController deviceControl;
+	
+	@Autowired
+	private BillManger billManger;
+	
+	
 
 	/**
 	 * 平台下发开始充电指令
@@ -86,6 +89,7 @@ public class WebController {
 			var device=deviceSevice.findItemById(plugInfo.getDeviceid(), StationDevice.class).block();
 			Assert.notNull(plugInfo, String.format("没有ID=%d对应的设备信息", plugInfo.getDeviceid()));
 			
+			logger.debug(String.format("请求设备(%s)第(%d)号插座开始充电", device.getCode(),plugInfo.getDeviceindex()));
 			
 			
 			// 获取与桩号相关的会话
@@ -96,8 +100,14 @@ public class WebController {
 			}
 
 			var info = SessionInfo.getSessionInfoFromSession(session);
+								
 			
-			var res = deviceControl.startCharge(session,userId,device.getId(),plugInfo.getDeviceindex(), minutes);
+			var res=deviceControl.startCharge(session,userId,device.getId(),plugInfo.getDeviceindex(), minutes);
+			
+						
+			logger.debug(String.format("请求设备(%s)第(%d)号插座开始充电成功,帐单号为%d",
+					device.getCode(),plugInfo.getDeviceindex(),res));
+			
 			
 			return Result.success(res);
 		} catch (Exception e) {
@@ -131,7 +141,7 @@ public class WebController {
 			Assert.notNull(plug, String.format("编号为%d的插头没有找到", bill.getPlugid()));
 			
 			
-			deviceControl.stopCharge(session,billId,plug.getDeviceindex());
+			deviceControl.stopCharge(session,billId,plug.getDeviceid(),plug.getDeviceindex());
 			
 			return Result.success(true);
 		} catch (Exception e) {

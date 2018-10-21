@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 import org.apache.mina.core.session.IoSession;
 
+import com.ao.scanElectricityBis.base.ScanElectricityException;
+
 import ahh.swallowIotServer.exception.IotServerException;
 
 public interface BaseController {
@@ -11,14 +13,7 @@ public interface BaseController {
 	
 
 	
-	/**
-	 * 平台下发结束充电指令
-	 * 
-	 * @param session
-	 * @return
-	 * @throws IotServerException
-	 */
-	void stopCharge(IoSession session,int billId,int index) throws IotServerException;
+	
 
 	/**
 	 * 平台下发账单(时长)指令
@@ -51,5 +46,15 @@ public interface BaseController {
 
 
 	int startCharge(IoSession session,int userId,int deviceId,int index,int minutes) throws IotServerException;
+
+	/**
+	 * 平台下发结束充电指令
+	 * @param session
+	 * @param billId
+	 * @param deviceId
+	 * @param index
+	 * @throws ScanElectricityException 
+	 */
+	void stopCharge(IoSession session, int billId, int deviceId, int index) throws ScanElectricityException;
 
 }

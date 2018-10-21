@@ -7,6 +7,7 @@ import ahh.swallowIotServer.protocol.config.cmd.BaseCommand;
 import ahh.swallowIotServer.protocol.config.cmd.UpCommand;
 import ahh.swallowIotServer.protocol.config.fields.ConstByteArrayFieldConfig;
 import ahh.swallowIotServer.protocol.config.fields.ConstByteFieldConfig;
+import ahh.swallowIotServer.protocol.config.fields.ConstLongFieldConfig;
 import ahh.swallowIotServer.protocol.config.fields.FieldConfig;
 import ahh.swallowIotServer.protocol.config.fields.FieldFixValue;
 import ahh.swallowIotServer.protocol.config.fields.FieldLen;
@@ -26,9 +27,9 @@ public interface Is1RegisterRequest extends BaseCommand, Is1UpHeader {
 	 * 
 	 * @return
 	 */
-	@FieldConfig(order = 1, type = ConstByteArrayFieldConfig.class)
+	@FieldConfig(order = 1, type = ConstLongFieldConfig.class)
 	@FieldLen(8)
-	byte[] getDeviceCode();
+	long getDeviceCode();
 
 	/**
 	 * crc校验位

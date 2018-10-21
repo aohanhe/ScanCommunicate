@@ -1,11 +1,13 @@
 package com.ao.scanCommunicate.protocol;
 
+import org.apache.http.util.Asserts;
 import org.apache.mina.core.session.IoSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 
+import com.ao.scanCommunicate.business.BillManger;
 import com.ao.scanCommunicate.protocol.packetdown.Is1HeartbeatResponseCommand;
 import com.ao.scanCommunicate.protocol.packetdown.Is1RegisterCommand;
 import com.ao.scanCommunicate.protocol.packetdown.Is1StateResponseCommand;
@@ -46,12 +48,15 @@ public class Is1Dispatcher {
 	private ServerIoHandlerAdapter serverAdapter;
 	@Autowired
 	private DeviceService deviceService;
-	
+
 	@Autowired
 	private PlugInfoService plugInfoService;
-	
+
 	@Autowired
 	private ExpensesService expensesService;
+	
+	@Autowired
+	private BillManger billManger;
 
 	/**
 	 * 注册TCP总机上行
@@ -65,45 +70,48 @@ public class Is1Dispatcher {
 		try {
 			logger.info("====================>注册TCP总机上行包，session=" + session.getId());
 
-			String deviceCode = new String(cmd.getDeviceCode(), "UTF-8");
+			String deviceCode = Long.toString(cmd.getDeviceCode());
+			deviceCode = deviceCode.trim();
 			// 更新当前session对应的设备号
 			serverAdapter.setSessionDeviceCode(session, deviceCode);
 			var device = deviceService.findItemByCode(deviceCode);
-			//把设备ID放在扩展数据中
-			SessionInfo.bindSessionExtedDataToSession(session, new ExtendSessionData(device.getId()));
-			
+
+			Assert.notNull(device, String.format("没有的到编号%s的设备", deviceCode));
+
+			// 把设备ID放在扩展数据中
+			this.bindDataToSession(session, new ExtendSessionData(device.getId()));
+
 			deviceService.updateDeviceStatus(device.getId(), DeviceService.DeviceStatus_OnLine);
-			
+
 			var response = new Is1RegisterCommand();
 			// 验证结果,0：失败，1：成功
 			response.setAuthResult((byte) 1);
 			// 向设备回复指令
 			session.write(response);
 
-			logger.info("====================> 注册TCP总机上行包，session=" + session.getId()+" deivceCode"+cmd.getDeviceCode());
+			logger.info("====================> 注册TCP总机上行包，session=" + session.getId() + " deivceCode"
+					+ cmd.getDeviceCode());
 
 		} catch (Exception e) {
 			logger.error("====================> 注册TCP总机上行业务处理出错！！！" + e.getMessage(), e);
 		}
 	}
-	
+
+	private final static String ExtendDataKey = "ScanExtend_Data";
+
+	private void bindDataToSession(IoSession session, ExtendSessionData data) {
+		session.setAttribute(ExtendDataKey, data);
+	}
+
 	/**
 	 * 从session中取得设备ID
+	 * 
 	 * @param session
 	 * @return
 	 */
-	private int getSessionDeviceId(IoSession session) {
-		return ((ExtendSessionData)SessionInfo.getSessionExtedData(session)).getDeviceId();
-	}
-	
-	private int getSessionBillId(IoSession session,int index) {
-		return ((ExtendSessionData)SessionInfo.getSessionExtedData(session)).getPlugBillId(index);
-	}
-	/**
-	 * 设置session bill id
-	 */
-	private void setSessionBillId(IoSession session,int index,int billId) {
-		((ExtendSessionData)SessionInfo.getSessionExtedData(session)).setPlugBillId(index, billId);
+	private Integer getSessionDeviceId(IoSession session) {
+		if(session.getAttribute(ExtendDataKey)==null) return  null;
+		return ((ExtendSessionData) session.getAttribute(ExtendDataKey)).getDeviceId();
 	}
 
 	/**
@@ -117,26 +125,25 @@ public class Is1Dispatcher {
 	public void onHeartbeatResponse(IoSession session, Is1HeartbeatRequest cmd) throws IotServerException {
 		try {
 			logger.info("====================>心跳上行包，session=" + session.getId());
-			
+
 			var response = new Is1HeartbeatResponseCommand();
 
 			// 向设备回复指令
 			session.write(response);
-			
-			//更新设备插头的状态
-			int deviceId=getSessionDeviceId(session);
-			
-			
-			short state=cmd.getState();
-			Flux.range(0, cmd.getLen())
-				.map(index->{
-					short bt=(short)(0x01<<(16-1-index));
-					return Pair.of(index, !(bt==0));					
-				}).subscribe(item->{
-					//把所有插头信息状态更新到数据库
-					plugInfoService.updatePlugIsWorking(deviceId, item.getFirst(), 
-							item.getSecond());
-				});			
+
+			// 更新设备插头的状态
+			Integer deviceId = getSessionDeviceId(session);
+			Asserts.notNull(deviceId, "当前session没有绑定设备ID");
+
+			short state = cmd.getState();
+
+			Flux.range(0, cmd.getLen()).map(index -> {
+				short bt = (short) (0x01 << (16-index-1));
+				return Pair.of(index+1, (bt & state) != 0);
+			}).subscribe(item -> {
+				// 把所有插头信息状态更新到数据库				
+				plugInfoService.updatePlugIsWorking(deviceId, item.getFirst(), item.getSecond());
+			});
 
 			logger.info("====================> 心跳下行包，session=" + session.getId());
 
@@ -161,13 +168,13 @@ public class Is1Dispatcher {
 
 			// 向设备回复指令
 			session.write(response);
-			
-			//更新设备插头的状态
-			int deviceId=getSessionDeviceId(session);
-			
-			//更新插头的工作状态
-			plugInfoService.updatePlugStatus(deviceId, (int)cmd.getAddr(), (int)cmd.getState());
-			
+
+			// 更新设备插头的状态
+			Integer deviceId = getSessionDeviceId(session);
+			Asserts.notNull(deviceId, "当前session没有绑定设备ID");
+
+			// 更新插头的工作状态
+			plugInfoService.updatePlugStatus(deviceId, (int) cmd.getAddr(), (int) cmd.getState());
 
 			logger.info("====================> 状态下行包，session=" + session.getId());
 
@@ -187,16 +194,16 @@ public class Is1Dispatcher {
 	public void onChargeResponse(IoSession session, Is1ChargeResponse cmd) throws IotServerException {
 		try {
 			logger.info("====================> 开始充电上行包，session=" + session.getId());
-			
-			var deivceId=this.getSessionDeviceId(session);
-			
-			
-			
-			var billId=this.getSessionBillId(session, cmd.getAddr());
+
+			Integer deviceId = getSessionDeviceId(session);
+			Asserts.notNull(deviceId, "当前session没有绑定设备ID");
+
+			var billId = plugInfoService.getPlugBillIdByByDeviceIdAndIndex(deviceId, cmd.getAddr());			
 			
 
-			//设置充电帐单为开始
-			expensesService.upExpenseBillStart(billId);
+			Assert.notNull(billId, String.format("设备id=%d 第%d个插头没有绑定帐单信息", deviceId, cmd.getAddr()));
+			
+			billManger.notifyBillStartCharge(billId);		
 
 		} catch (Exception e) {
 			logger.error("====================> 开始充电业务处理出错！！！" + e.getMessage(), e);
@@ -217,11 +224,14 @@ public class Is1Dispatcher {
 			var response = new Is1StopResponseCommand(cmd.getAddr());
 
 			session.write(response);
-			
-			var deivceId=this.getSessionDeviceId(session);			
-			var billId=this.getSessionBillId(session, cmd.getAddr());
-			
-			expensesService.finishExpenseBill(billId,Integer.parseInt(cmd.getMinutes()));
+
+			Integer deviceId = getSessionDeviceId(session);
+			Asserts.notNull(deviceId, "当前session没有绑定设备ID");
+			var billId = plugInfoService.getPlugBillIdByByDeviceIdAndIndex(deviceId, cmd.getAddr());
+
+			Assert.notNull(billId, String.format("设备id=%d 第%d个插头没有绑定帐单信息", deviceId, cmd.getAddr()));
+
+			billManger.notifyBillFinishCharge(billId, cmd.getMinutes());
 
 			logger.info("====================> 完成充电下行包，session=" + session.getId());
 
@@ -241,10 +251,13 @@ public class Is1Dispatcher {
 		try {
 			logger.info("====================> 账单上行包，session=" + session.getId());
 
-			var deivceId=this.getSessionDeviceId(session);			
-			var billId=this.getSessionBillId(session, cmd.getAddr());
-			
-			expensesService.upExpenseBillCost(billId, Integer.parseInt(cmd.getMinutes()));
+			Integer deviceId = getSessionDeviceId(session);
+			Asserts.notNull(deviceId, "当前session没有绑定设备ID");
+			var billId = plugInfoService.getPlugBillIdByByDeviceIdAndIndex(deviceId, cmd.getAddr());
+
+			Assert.notNull(billId, String.format("设备id=%d 第%d个插头没有绑定帐单信息", (int)deviceId, cmd.getAddr()));
+
+			billManger.notifyBillHeader(billId, Integer.parseInt(cmd.getMinutes()));
 
 			logger.info("====================> 账单下行包，session=" + session.getId());
 
@@ -268,6 +281,15 @@ public class Is1Dispatcher {
 			// Is1ResumeCommand response = new Is1ResumeCommand(cmd.getAddr());
 			// 取得设备的数据库数据进行组装
 			// session.write(response);
+			
+			Integer deviceId = getSessionDeviceId(session);
+			Asserts.notNull(deviceId, "当前session没有绑定设备ID");
+			var billId = plugInfoService.getPlugBillIdByByDeviceIdAndIndex(deviceId, cmd.getAddr());
+
+			Assert.notNull(billId, String.format("设备id=%d 第%d个插头没有绑定帐单信息", (int)deviceId, cmd.getAddr()));
+
+			billManger.notifyBillResum(billId);
+			
 
 			logger.info("====================> 恢复充电下行包，session=" + session.getId());
 

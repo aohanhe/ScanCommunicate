@@ -35,7 +35,7 @@ public interface Is1FinishResponse extends BaseCommand, Is1UpHeader {
 	 * @return
 	 */
 	@FieldConfig(order = 2, type = ConstShortFieldConfig.class)
-	String getMinutes();
+	short getMinutes();
 
 	/**
 	 * 充电量

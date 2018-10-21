@@ -28,10 +28,16 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	springStatemachineVersion = '2.0.1.RELEASE'
+}
 
 dependencies {
 	compile project(':ScanBisServer')
 	compile project(':swallowIotServer')
+	
+	compile('org.springframework.statemachine:spring-statemachine-starter')
+	compile('org.springframework.statemachine:spring-statemachine-data-mongodb')
 	
 	compile('org.apache.commons:commons-lang3:3.8')
 	compile('io.projectreactor:reactor-core')
@@ -50,8 +56,12 @@ dependencies {
 	testCompile('org.springframework.security:spring-security-test')
 }
 
-tasks.withType(JavaCompile) {
-	
-		options.encoding = 'GBK'
-	
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.statemachine:spring-statemachine-bom:${springStatemachineVersion}"
+	}
+}
+
+tasks.withType(JavaCompile) {	
+		options.encoding = 'UTF-8'	
 }

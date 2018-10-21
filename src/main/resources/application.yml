@@ -1,134 +1,36 @@
-##################################### Determime which configuration be used
-spring: 
-      profiles: 
-            active: "test"
-      # Mysql connection configuration(share)
-      datasource: 
-            platform: "mysql"
-            driverClassName: "com.mysql.cj.jdbc.Driver"
-            max-active: 50
-            max-idle: 6
-            min-idle: 2
-            initial-size: 6
- 
-##################################### 驿联2.0协议端口 #####################################
 protocl:
-      is1:
-            port: 16888 
-            
-##################################### 系统mqtt的设置 #####################################
+  is1:
+    port: 9100
 mqtt:
-      serverUrl: "tcp://39.108.7.234:1883"
-      user: "admin"
-      pwd: "password"
-      clientId: "Evlink2"
-      topicPre: "monitoring/"
-      #enable: false
-      mqttRequestTopic: "/pileMqttRequest"
-      mqttResponseTopic: "/pileMqttResponse"
-
-            
-##################################### Tomcat http server configuration
-server: 
-      tomcat: 
-            # character encoding to use for URL decoding
-            uri-encoding: "UTF-8"
-            # base dir (usually not needed, defaults to tmp)
-            basedir: "/tmp"
-            # number of threads in protocol handler
-            max-threads: 0
-            # pattern of the access log
-            access-log-pattern: 
-            # whether access logging enabled 
-            access-log-enabled: true 
-            # ssl forward headers
-            protocol-header: "x-forwarded-proto" 
-            remote-ip-header: "x-forwarded-for"
-            # in seconds
-            background-processor-delay: 30
-      # context path
-      servlet:
-         context-path: "/"
-      # bind to a specific NIC
-      address: "0.0.0.0"
-      # session timeout in seconds
-      session-timeout: 4000
-      # the servlet path, defaults to '/'
-      servlet-path: "/"
-      isoutlogger: true      
-
-
-
----
-##################################### for dev environment
-spring: 
-      profiles: "dev"
-      datasource: 
-            # mysql connection url(dev)
-            url: "jdbc:mysql://localhost:3306/pilesmanagement?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false"
-            # mysql connection user(dev)
-            username: "root"
-            # mysql connection password(dev)
-            password: "root"
-      data: 
-            mongodb: 
-                  # mongodb connection url(dev)
-                  uri: "mongodb://39.108.7.234:27017/chargingpile_test_mongo?maxPoolSize=200"
-server: 
-      # tomcat port
-      port: 8087
-##################################### 侦听服务器IP #####################################
+  serverUrl: tcp://39.108.7.234:1883
+  user: admin
+  pwd: password
+  clientId: Evlink2
+  topicPre: monitoring/
+  mqttRequestTopic: /pileMqttRequest
+  mqttResponseTopic: /pileMqttResponse
+spring:
+  datasource:
+    url: jdbc:mysql://183.237.21.252:13306/mysqltest
+    username: mysqltest
+    password: mysqltest
+    hikari:
+      validation-timeout: 30000
+      connection-test-query: SELECT 1 FROM DUAL
+      max-lifetime: 30000
+  data:
+    mongodb:
+      uri: mongodb://39.108.7.234:27017/chargingpile_test_mongo?maxPoolSize=200
+  jpa:
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    root: info
+    org.hibernate.SQL: debug
+    
+server:
+  port: 8087
 yunwei:
-      ywListener:
-            serviceIp: "120.78.141.20"
-            
-            
----
-##################################### for product environment
-spring: 
-      profiles: "product"
-      datasource: 
-            # mysql connection url(product)
-            url: "jdbc:mysql://119.23.52.165:3306/pilesmanagement?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false"
-            # mysql connection user(product)
-            username: "root"
-            # mysql connection password(product)
-            password: "root"
-      data: 
-            mongodb: 
-                  # mongodb connection url(product)
-                  uri: "mongodb://39.108.7.234:27017/chargingpile_mongo?maxPoolSize=200"
-server: 
-      # tomcat port
-      port: 8087
-      
-##################################### 侦听服务器IP #####################################
-yunwei:
-      ywListener:
-            serviceIp: "39.108.7.234"
-            
-            
----
-##################################### for test environment
-spring: 
-      profiles: "test"
-      datasource: 
-            # mysql connection url(test)
-            url: "jdbc:mysql://119.23.52.165:3306/pilesmanagement_test?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&useSSL=false"
-            # mysql connection user(test)
-            username: "root"
-            # mysql connection password(test)
-            password: "root"
-      data: 
-            mongodb: 
-                  # mongodb connection url(test)
-                  uri: "mongodb://39.108.7.234:27017/chargingpile_test_mongo?maxPoolSize=200"
-server: 
-      # tomcat port
-      port: 8087
-##################################### 侦听服务器IP #####################################
-yunwei:
-      ywListener:
-            serviceIp: "120.78.141.20"
-
-
+  ywListener:
+    serviceIp: 120.78.141.20

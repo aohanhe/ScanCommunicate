@@ -14,7 +14,12 @@ import com.ao.scanCommunicate.protocol.packetdown.Is1ChargeCommand;
 import com.ao.scanCommunicate.protocol.packetdown.Is1ResumeCommand;
 import com.ao.scanCommunicate.protocol.packetdown.Is1StateCommand;
 import com.ao.scanCommunicate.protocol.packetdown.Is1StopCommand;
+import com.ao.scanElectricityBis.base.ScanElectricityException;
 import com.ao.scanElectricityBis.service.ExpensesService;
+import com.ao.scanElectricityBis.service.PlugInfoService;
+import com.mysema.commons.lang.Assert;
+import com.ao.scanCommunicate.business.BillManger;
+import com.ao.scanCommunicate.business.BillStatActions;
 import com.ao.scanCommunicate.protocol.BaseController;
 
 import ahh.swallowIotServer.exception.IotServerException;
@@ -28,6 +33,12 @@ public class Is1Controller implements BaseController {
 	protected static Logger logger = LoggerFactory.getLogger(Is1Controller.class);
 	@Autowired
 	private ExpensesService expenseService;
+	
+	@Autowired
+	private PlugInfoService plugInfo;
+	
+	@Autowired
+	private BillManger billManger;
 
 	
 
@@ -40,7 +51,8 @@ public class Is1Controller implements BaseController {
 
 		try {
 			//在数据库创建充电帐单
-			var billId=expenseService.createExpenseBill(deviceId, index, userId, minutes);
+			var billId=billManger.createExpenseBill(userId, deviceId, index, minutes);
+			
 			
 			Is1ChargeCommand response = new Is1ChargeCommand();
 			response.setAddr((byte) index);
@@ -49,6 +61,7 @@ public class Is1Controller implements BaseController {
 			session.write(response);
 
 			logger.info("====================> 平台下发开始充电下行包，session=" + session.getId());
+						
 			
 			return billId;
 
@@ -60,27 +73,33 @@ public class Is1Controller implements BaseController {
 
 	/**
 	 * 平台下发结束充电指令
+	 * @throws ScanElectricityException 
 	 */
 	@Override
-	public void stopCharge(IoSession session,int billId,int index) throws IotServerException {
+	public void stopCharge(IoSession session,int billId,int deviceId,int index) throws ScanElectricityException  {
 		HashMap<String, Object> result = new HashMap<String, Object>();
 
 		try {		
 			
+			expenseService.finishExpenseBill(billId, null); //立即中止帐单
+
+			//检查指定的设备当前的帐单是不是同一个
+			var billCode=plugInfo.getPlugBillIdByByDeviceIdAndIndex(deviceId, index);
+			
+			Assert.isTrue(billCode!=null&&billCode==billId, 
+					String.format("设备(%d) 第(%d)插头当前的id是为%d订单，与要结束的订单id=%d不符", deviceId,index,billCode,billId));
+			
+			logger.info("====================> 平台下发结束充电下行包，session=" + session.getId());
 			
 			Is1StopCommand response = new Is1StopCommand();
 			response.setAddr((byte) 1);
 			// 取得设备的数据库数据进行组装
 			session.write(response);
-			
-			expenseService.finishExpenseBill(billId, null); //立即中止帐单
-
-			logger.info("====================> 平台下发结束充电下行包，session=" + session.getId());
-			
 			 
 
 		} catch (Exception e) {
 			logger.error("====================> 平台下发结束充电下行包出错！" + e.getMessage(), e);
+			throw new ScanElectricityException("结束充电出错:"+e.getMessage(),e);
 		}	
 	}
 
