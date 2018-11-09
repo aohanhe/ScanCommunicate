@@ -1,0 +1,38 @@
+protocl:
+  is1:
+    port: 9100
+mqtt:
+  serverUrl: tcp://39.108.7.234:1883
+  user: admin
+  pwd: password
+  clientId: Evlink2
+  topicPre: monitoring/
+  mqttRequestTopic: /pileMqttRequest
+  mqttResponseTopic: /pileMqttResponse
+spring:
+  datasource:
+    url: jdbc:mysql://183.237.21.252:13306/mysqltest
+    username: mysqltest
+    password: mysqltest
+    hikari:
+      validation-timeout: 30000
+      connection-test-query: SELECT 1 FROM DUAL
+      max-lifetime: 30000
+  data:
+    mongodb:
+      uri: mongodb://39.108.7.234:27017/chargingpile_test_mongo?maxPoolSize=200
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:    
+  level:    
+    root: info
+    org.hibernate.SQL: debug
+    
+    
+server:
+  port: 8087
+yunwei:
+  ywListener:
+    serviceIp: 120.78.141.20

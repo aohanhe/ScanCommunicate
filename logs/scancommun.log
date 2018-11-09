@@ -1,0 +1,461 @@
+2018-10-28 21:38:29,484 [restartedMain] INFO  com.ao.ScanCommunicateApplication:50 - Starting ScanCommunicateApplication on DESKTOP-OIJ4D8O with PID 20072 (started by aohanhe in D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate)
+2018-10-28 21:38:29,511 [restartedMain] INFO  com.ao.ScanCommunicateApplication:689 - The following profiles are active: dev
+2018-10-28 21:38:32,335 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-28 21:38:32,336 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-10-28 21:38:32,502 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.DeviceMongoRepository.
+2018-10-28 21:38:32,524 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.PlugInfoMongoRepository.
+2018-10-28 21:38:32,533 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.StationEntryMongoRepository.
+2018-10-28 21:38:32,593 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 242ms. Found 8 repository interfaces.
+2018-10-28 21:38:32,595 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-28 21:38:32,596 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-10-28 21:38:32,848 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.AccountExpenseRepository.
+2018-10-28 21:38:32,854 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.AccountRechargeRepository.
+2018-10-28 21:38:32,856 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.AccountRepository.
+2018-10-28 21:38:32,860 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.DeviceRepository.
+2018-10-28 21:38:32,862 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.OperatorsRepositiory.
+2018-10-28 21:38:32,865 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.PlugInfoRepository.
+2018-10-28 21:38:32,869 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.StationRepositiory.
+2018-10-28 21:38:32,871 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.UserRepository.
+2018-10-28 21:38:32,895 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 297ms. Found 3 repository interfaces.
+2018-10-28 21:38:33,645 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-28 21:38:33,648 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-10-28 21:38:33,686 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.AccountExpenseRepository.
+2018-10-28 21:38:33,687 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.AccountRechargeRepository.
+2018-10-28 21:38:33,688 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.AccountRepository.
+2018-10-28 21:38:33,689 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.DeviceMongoRepository.
+2018-10-28 21:38:33,690 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.DeviceRepository.
+2018-10-28 21:38:33,691 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.OperatorsRepositiory.
+2018-10-28 21:38:33,692 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.PlugInfoMongoRepository.
+2018-10-28 21:38:33,693 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.PlugInfoRepository.
+2018-10-28 21:38:33,693 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.StationEntryMongoRepository.
+2018-10-28 21:38:33,694 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.StationRepositiory.
+2018-10-28 21:38:33,695 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport:369 - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.ao.scanElectricityBis.repository.UserRepository.
+2018-10-28 21:38:33,701 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 44ms. Found 0 repository interfaces.
+2018-10-28 21:38:33,893 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-28 21:38:33,894 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-10-28 21:38:33,953 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate:182 - Finished Spring Data repository scanning in 58ms. Found 5 repository interfaces.
+2018-10-28 21:38:34,106 [restartedMain] INFO  a.s.protocol.config.AutoAnnontationLoadTool:47 - 开始AutoAnnontationLoadTool扫描............
+2018-10-28 21:38:34,134 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.ServerWebSecurityConfigurerAdapter
+2018-10-28 21:38:34,136 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.StateMachineConfig$JpaPersisterConfig
+2018-10-28 21:38:34,137 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.StateMachineConfig$MachineConfig$1
+2018-10-28 21:38:34,138 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.StateMachineConfig$MachineConfig$2
+2018-10-28 21:38:34,138 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.StateMachineConfig$MachineConfig$3
+2018-10-28 21:38:34,139 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.StateMachineConfig$MachineConfig$4
+2018-10-28 21:38:34,140 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.StateMachineConfig$MachineConfig$5
+2018-10-28 21:38:34,142 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.StateMachineConfig$MachineConfig
+2018-10-28 21:38:34,143 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.StateMachineConfig$ServiceConfig
+2018-10-28 21:38:34,144 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.config.StateMachineConfig
+2018-10-28 21:38:34,147 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.auth.ScanServerCurrentUserAware
+2018-10-28 21:38:34,148 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.business.BillManger
+2018-10-28 21:38:34,149 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.business.BillStatActions
+2018-10-28 21:38:34,151 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.business.DeviceManger
+2018-10-28 21:38:34,153 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.mqtt.MqttConfig
+2018-10-28 21:38:34,154 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.mqtt.MqttMessagerHandler
+2018-10-28 21:38:34,155 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.BaseController
+2018-10-28 21:38:34,156 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.ExtendSessionData
+2018-10-28 21:38:34,157 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.IGetProtocolRmControl
+2018-10-28 21:38:34,158 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.Is1BaseDownPacket
+2018-10-28 21:38:34,160 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.Is1BaseUpPacket
+2018-10-28 21:38:34,160 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.Is1ConfirmCmdhandler
+2018-10-28 21:38:34,162 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.Is1Controller
+2018-10-28 21:38:34,163 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.Is1CrcHandler
+2018-10-28 21:38:34,164 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.Is1DownHeader
+2018-10-28 21:38:34,165 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.Is1GlobalConst
+2018-10-28 21:38:34,167 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.protocol.Is1UpHeader
+2018-10-28 21:38:34,176 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.util.SpringUtil
+2018-10-28 21:38:34,177 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.web.BaseResult
+2018-10-28 21:38:34,178 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.web.Result
+2018-10-28 21:38:34,181 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanCommunicate.web.WebController
+2018-10-28 21:38:34,183 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.state.OrderEvents
+2018-10-28 21:38:34,184 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.auth.CurrentUserAware
+2018-10-28 21:38:34,185 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.auth.IScanServerPrincipal
+2018-10-28 21:38:34,185 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.auth.ScanServerPrincipal$UserType
+2018-10-28 21:38:34,186 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.auth.ScanServerPrincipal
+2018-10-28 21:38:34,187 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.auth.ScanServerPrincipalManger
+2018-10-28 21:38:34,188 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.base.ScanElectricityException
+2018-10-28 21:38:34,189 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.base.ScanElectricityKeyException
+2018-10-28 21:38:34,191 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.base.ScanSeverExpressionMaps
+2018-10-28 21:38:34,193 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.base.UserInfo
+2018-10-28 21:38:34,194 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.AccountExpense
+2018-10-28 21:38:34,196 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.AccountExpenseMongoEntity
+2018-10-28 21:38:34,197 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.AccountRecharge
+2018-10-28 21:38:34,201 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.BaseAccount
+2018-10-28 21:38:34,205 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.BaseBisEntity
+2018-10-28 21:38:34,207 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.BaseOnlyIdEntity
+2018-10-28 21:38:34,209 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.BaseOperator
+2018-10-28 21:38:34,227 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.DeviceMongoEntry
+2018-10-28 21:38:34,228 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.PlugInfoMongoEntity
+2018-10-28 21:38:34,229 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QAccountExpense
+2018-10-28 21:38:34,260 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QAccountRecharge
+2018-10-28 21:38:34,272 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QBaseAccount
+2018-10-28 21:38:34,282 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QBaseBisEntity
+2018-10-28 21:38:34,294 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QBaseOnlyIdEntity
+2018-10-28 21:38:34,304 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QBaseOperator
+2018-10-28 21:38:34,335 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QStationDevice
+2018-10-28 21:38:34,359 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QStationPlugInfo
+2018-10-28 21:38:34,381 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QStationStationInfo
+2018-10-28 21:38:34,436 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.QUserInfo
+2018-10-28 21:38:34,452 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.StationDevice
+2018-10-28 21:38:34,459 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.StationMongoEntry$Pos
+2018-10-28 21:38:34,460 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.StationMongoEntry
+2018-10-28 21:38:34,461 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.StationPlugInfo
+2018-10-28 21:38:34,466 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.StationStationInfo
+2018-10-28 21:38:34,473 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.entity.UserInfo
+2018-10-28 21:38:34,480 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.AccountExpenseRepository
+2018-10-28 21:38:34,481 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.AccountRechargeRepository
+2018-10-28 21:38:34,482 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.AccountRepository
+2018-10-28 21:38:34,483 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.DeviceMongoRepository
+2018-10-28 21:38:34,484 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.DeviceRepository
+2018-10-28 21:38:34,485 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.OperatorsRepositiory
+2018-10-28 21:38:34,486 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.PlugInfoMongoRepository
+2018-10-28 21:38:34,487 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.PlugInfoRepository
+2018-10-28 21:38:34,488 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.StationEntryMongoRepository
+2018-10-28 21:38:34,489 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.StationRepositiory
+2018-10-28 21:38:34,490 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.repository.UserRepository
+2018-10-28 21:38:34,492 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.service.AccountService
+2018-10-28 21:38:34,493 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.service.BaseService
+2018-10-28 21:38:34,495 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.service.DeviceService
+2018-10-28 21:38:34,498 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.service.ExpensesService
+2018-10-28 21:38:34,500 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.service.OperatorsService
+2018-10-28 21:38:34,501 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.service.PlugInfoService
+2018-10-28 21:38:34,502 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.service.RechargesService
+2018-10-28 21:38:34,504 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.service.StationService
+2018-10-28 21:38:34,506 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:97 - check metadata:com.ao.scanElectricityBis.service.UsersService
+2018-10-28 21:38:34,507 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.config.ServerWebSecurityConfigurerAdapter
+2018-10-28 21:38:34,508 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.config.StateMachineConfig$JpaPersisterConfig
+2018-10-28 21:38:34,509 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.config.StateMachineConfig$MachineConfig
+2018-10-28 21:38:34,510 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.config.StateMachineConfig$ServiceConfig
+2018-10-28 21:38:34,511 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.config.StateMachineConfig
+2018-10-28 21:38:34,512 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.auth.ScanServerCurrentUserAware
+2018-10-28 21:38:34,512 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.business.BillManger
+2018-10-28 21:38:34,516 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.business.BillStatActions
+2018-10-28 21:38:34,517 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.business.DeviceManger
+2018-10-28 21:38:34,518 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.mqtt.MqttConfig
+2018-10-28 21:38:34,519 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.Is1Controller
+2018-10-28 21:38:34,519 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.Is1Dispatcher
+2018-10-28 21:38:34,537 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.Is1Dispatcher
+2018-10-28 21:38:34,542 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.Is1Protocol
+2018-10-28 21:38:34,543 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.Is1Protocol
+2018-10-28 21:38:34,543 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1AlertCommand
+2018-10-28 21:38:34,544 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1AlertCommand
+2018-10-28 21:38:34,544 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1BillCommand
+2018-10-28 21:38:34,545 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1BillCommand
+2018-10-28 21:38:34,546 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1ChargeCommand
+2018-10-28 21:38:34,547 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1ChargeCommand
+2018-10-28 21:38:34,547 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1HeartbeatResponseCommand
+2018-10-28 21:38:34,548 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1HeartbeatResponseCommand
+2018-10-28 21:38:34,548 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1RegisterCommand
+2018-10-28 21:38:34,549 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1RegisterCommand
+2018-10-28 21:38:34,550 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1ResumeCommand
+2018-10-28 21:38:34,552 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1ResumeCommand
+2018-10-28 21:38:34,552 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1StateCommand
+2018-10-28 21:38:34,554 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1StateCommand
+2018-10-28 21:38:34,555 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1StateResponseCommand
+2018-10-28 21:38:34,556 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1StateResponseCommand
+2018-10-28 21:38:34,556 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1StopCommand
+2018-10-28 21:38:34,557 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1StopCommand
+2018-10-28 21:38:34,557 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetdown.Is1StopResponseCommand
+2018-10-28 21:38:34,558 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:133 - register bean:com.ao.scanCommunicate.protocol.packetdown.Is1StopResponseCommand
+2018-10-28 21:38:34,559 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetup.Is1BillResponse
+2018-10-28 21:38:34,577 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetup.Is1ChargeResponse
+2018-10-28 21:38:34,579 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetup.Is1FaultResponse
+2018-10-28 21:38:34,582 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetup.Is1FinishResponse
+2018-10-28 21:38:34,585 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetup.Is1HeartbeatRequest
+2018-10-28 21:38:34,587 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetup.Is1RegisterRequest
+2018-10-28 21:38:34,592 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetup.Is1ResumeResponse
+2018-10-28 21:38:34,599 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetup.Is1StateRequest
+2018-10-28 21:38:34,602 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.protocol.packetup.Is1SuccessResponse
+2018-10-28 21:38:34,605 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.util.SpringUtil
+2018-10-28 21:38:34,606 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanCommunicate.web.WebController
+2018-10-28 21:38:34,608 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.auth.ScanServerPrincipalManger
+2018-10-28 21:38:34,610 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.AccountExpenseRepository
+2018-10-28 21:38:34,610 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.AccountRechargeRepository
+2018-10-28 21:38:34,611 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.AccountRepository
+2018-10-28 21:38:34,612 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.DeviceMongoRepository
+2018-10-28 21:38:34,612 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.DeviceRepository
+2018-10-28 21:38:34,613 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.OperatorsRepositiory
+2018-10-28 21:38:34,613 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.PlugInfoMongoRepository
+2018-10-28 21:38:34,614 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.PlugInfoRepository
+2018-10-28 21:38:34,618 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.StationEntryMongoRepository
+2018-10-28 21:38:34,618 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.StationRepositiory
+2018-10-28 21:38:34,619 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.repository.UserRepository
+2018-10-28 21:38:34,621 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.service.AccountService
+2018-10-28 21:38:34,623 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.service.DeviceService
+2018-10-28 21:38:34,623 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.service.ExpensesService
+2018-10-28 21:38:34,624 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.service.OperatorsService
+2018-10-28 21:38:34,624 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.service.PlugInfoService
+2018-10-28 21:38:34,627 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.service.RechargesService
+2018-10-28 21:38:34,628 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.service.StationService
+2018-10-28 21:38:34,630 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:105 - 扫描到注册组件:com.ao.scanElectricityBis.service.UsersService
+2018-10-28 21:38:34,631 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\Is1Dispatcher.class],注册并加载完成
+2018-10-28 21:38:34,632 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\Is1Protocol.class],注册并加载完成
+2018-10-28 21:38:34,632 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1AlertCommand.class],注册并加载完成
+2018-10-28 21:38:34,632 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1BillCommand.class],注册并加载完成
+2018-10-28 21:38:34,633 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1ChargeCommand.class],注册并加载完成
+2018-10-28 21:38:34,633 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1HeartbeatResponseCommand.class],注册并加载完成
+2018-10-28 21:38:34,634 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1RegisterCommand.class],注册并加载完成
+2018-10-28 21:38:34,634 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1ResumeCommand.class],注册并加载完成
+2018-10-28 21:38:34,635 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1StateCommand.class],注册并加载完成
+2018-10-28 21:38:34,638 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1StateResponseCommand.class],注册并加载完成
+2018-10-28 21:38:34,639 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1StopCommand.class],注册并加载完成
+2018-10-28 21:38:34,641 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetdown\Is1StopResponseCommand.class],注册并加载完成
+2018-10-28 21:38:34,642 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetup\Is1BillResponse.class],注册并加载完成
+2018-10-28 21:38:34,642 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetup\Is1ChargeResponse.class],注册并加载完成
+2018-10-28 21:38:34,643 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetup\Is1FaultResponse.class],注册并加载完成
+2018-10-28 21:38:34,643 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetup\Is1FinishResponse.class],注册并加载完成
+2018-10-28 21:38:34,643 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetup\Is1HeartbeatRequest.class],注册并加载完成
+2018-10-28 21:38:34,643 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetup\Is1RegisterRequest.class],注册并加载完成
+2018-10-28 21:38:34,643 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetup\Is1ResumeResponse.class],注册并加载完成
+2018-10-28 21:38:34,644 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetup\Is1StateRequest.class],注册并加载完成
+2018-10-28 21:38:34,644 [restartedMain] INFO  a.s.protocol.config.AnnontationScanner:69 - 扫描到file [D:\代码\充电管理平台\ScanCommunicate\ScanCommunicate\bin\main\com\ao\scanCommunicate\protocol\packetup\Is1SuccessResponse.class],注册并加载完成
+2018-10-28 21:38:35,231 [restartedMain] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor:166 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2018-10-28 21:38:35,252 [restartedMain] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor:402 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2018-10-28 21:38:35,524 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c11924de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-28 21:38:35,556 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$1cad3adf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-28 21:38:35,572 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330 - Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration$$EnhancerBySpringCGLIB$$2c0ae00d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-28 21:38:36,699 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:91 - Tomcat initialized with port(s): 8087 (http)
+2018-10-28 21:38:36,728 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Initializing ProtocolHandler ["http-nio-8087"]
+2018-10-28 21:38:36,741 [restartedMain] INFO  org.apache.catalina.core.StandardService:173 - Starting service [Tomcat]
+2018-10-28 21:38:36,742 [restartedMain] INFO  org.apache.catalina.core.StandardEngine:173 - Starting Servlet Engine: Apache Tomcat/9.0.10
+2018-10-28 21:38:36,755 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener:173 - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-10\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-10/bin/server;C:/Program Files/Java/jdk-10/bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\apache-maven-3.5.3\bin;C:\WINDOWS\System32\OpenSSH\;;d:\Program Files\Microsoft VS Code\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\PuTTY\;C:\Users\aohanhe\AppData\Local\Microsoft\WindowsApps;C:\Users\aohanhe\AppData\Roaming\npm;C:\Program Files\Java\jdk-10\bin;D:\tool\gradle-4.8.1\bin;%GRADLE_PATH%\bin;;D:\Program Files\Microsoft VS Code\bin;D:\eclipse-photon;;.]
+2018-10-28 21:38:37,088 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]:173 - Initializing Spring embedded WebApplicationContext
+2018-10-28 21:38:37,088 [restartedMain] DEBUG org.springframework.web.context.ContextLoader:277 - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2018-10-28 21:38:37,088 [restartedMain] INFO  org.springframework.web.context.ContextLoader:285 - Root WebApplicationContext: initialization completed in 7232 ms
+2018-10-28 21:38:37,831 [restartedMain] INFO  org.mongodb.driver.cluster:71 - Cluster created with settings {hosts=[39.108.7.234:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=1000}
+2018-10-28 21:38:38,025 [cluster-ClusterId{value='5bd5bbdde8574b4e684ae1a6', description='null'}-39.108.7.234:27017] INFO  org.mongodb.driver.connection:71 - Opened connection [connectionId{localValue:1, serverValue:83}] to 39.108.7.234:27017
+2018-10-28 21:38:38,046 [cluster-ClusterId{value='5bd5bbdde8574b4e684ae1a6', description='null'}-39.108.7.234:27017] INFO  org.mongodb.driver.cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=39.108.7.234:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 4]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15324887}
+2018-10-28 21:38:39,060 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean:245 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-10-28 21:38:39,061 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean:245 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-10-28 21:38:39,061 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean:245 - Mapping filter: 'formContentFilter' to: [/*]
+2018-10-28 21:38:39,062 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean:245 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-10-28 21:38:39,062 [restartedMain] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean:245 - Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-10-28 21:38:39,063 [restartedMain] INFO  o.s.boot.web.servlet.FilterRegistrationBean:245 - Mapping filter: 'httpTraceFilter' to: [/*]
+2018-10-28 21:38:39,063 [restartedMain] INFO  o.s.boot.web.servlet.ServletRegistrationBean:186 - Servlet dispatcherServlet mapped to [/]
+2018-10-28 21:38:39,251 [restartedMain] WARN  com.zaxxer.hikari.HikariConfig:973 - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2018-10-28 21:38:39,252 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource:110 - HikariPool-1 - Starting...
+2018-10-28 21:38:39,723 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource:123 - HikariPool-1 - Start completed.
+2018-10-28 21:38:39,919 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-10-28 21:38:40,082 [restartedMain] INFO  org.hibernate.Version:46 - HHH000412: Hibernate Core {5.3.5.Final}
+2018-10-28 21:38:40,094 [restartedMain] INFO  org.hibernate.cfg.Environment:213 - HHH000206: hibernate.properties not found
+2018-10-28 21:38:40,486 [restartedMain] INFO  org.hibernate.annotations.common.Version:49 - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-10-28 21:38:40,813 [restartedMain] INFO  org.hibernate.dialect.Dialect:157 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-10-28 21:38:43,864 [restartedMain] INFO  o.h.hql.internal.QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2018-10-28 21:38:44,103 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer:57 - LiveReload server is running on port 35729
+2018-10-28 21:38:44,108 [restartedMain] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean:415 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-10-28 21:38:45,195 [restartedMain] INFO  org.mongodb.driver.connection:71 - Opened connection [connectionId{localValue:2, serverValue:84}] to 39.108.7.234:27017
+2018-10-28 21:38:46,069 [restartedMain] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping:139 - Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2018-10-28 21:38:46,393 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter:621 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1, ResponseBodyAdvice
+2018-10-28 21:38:46,456 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration:236 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-10-28 21:38:46,515 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping:332 - 4 mappings in 'requestMappingHandlerMapping'
+2018-10-28 21:38:46,542 [restartedMain] DEBUG o.s.web.servlet.handler.SimpleUrlHandlerMapping:139 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2018-10-28 21:38:46,562 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:302 - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2018-10-28 21:38:47,068 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration:86 - 
+
+Using generated security password: 2df8ef98-8f95-44f9-bd81-4a0ba2fd1f23
+
+2018-10-28 21:38:47,256 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain:43 - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@182f5bfc, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ed88a50, org.springframework.security.web.header.HeaderWriterFilter@4ff58a2b, org.springframework.security.web.csrf.CsrfFilter@1a349432, org.springframework.security.web.authentication.logout.LogoutFilter@496e9954, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f9a1ec1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5dd1b407, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2dc0251b, org.springframework.security.web.session.SessionManagementFilter@14d963df, org.springframework.security.web.access.ExceptionTranslationFilter@40cdefc7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a3410cc]
+2018-10-28 21:38:47,581 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver:59 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-10-28 21:38:47,970 [restartedMain] INFO  o.s.integration.endpoint.EventDrivenConsumer:107 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2018-10-28 21:38:47,971 [restartedMain] INFO  o.s.integration.channel.PublishSubscribeChannel:64 - Channel 'application.errorChannel' has 1 subscriber(s).
+2018-10-28 21:38:47,972 [restartedMain] INFO  o.s.integration.endpoint.EventDrivenConsumer:165 - started _org.springframework.integration.errorLogger
+2018-10-28 21:38:47,972 [restartedMain] INFO  o.s.integration.endpoint.EventDrivenConsumer:107 - Adding {message-handler:mqttConfig.mqttOutbound.serviceActivator} as a subscriber to the 'mqttOutboundChannel' channel
+2018-10-28 21:38:47,972 [restartedMain] INFO  o.s.integration.channel.DirectChannel:64 - Channel 'application.mqttOutboundChannel' has 1 subscriber(s).
+2018-10-28 21:38:47,973 [restartedMain] INFO  o.s.integration.endpoint.EventDrivenConsumer:165 - started mqttConfig.mqttOutbound.serviceActivator
+2018-10-28 21:38:47,973 [restartedMain] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway:165 - started mqttMessagerHandler
+2018-10-28 21:38:47,973 [restartedMain] INFO  o.s.integration.gateway.GatewayProxyFactoryBean:165 - started mqttMessagerHandler
+2018-10-28 21:38:48,011 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol:173 - Starting ProtocolHandler ["http-nio-8087"]
+2018-10-28 21:38:48,025 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool:173 - Using a shared selector for servlet write/read
+2018-10-28 21:38:48,063 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer:206 - Tomcat started on port(s): 8087 (http) with context path ''
+2018-10-28 21:38:48,067 [restartedMain] INFO  com.ao.ScanCommunicateApplication:59 - Started ScanCommunicateApplication in 19.543 seconds (JVM running for 21.607)
+2018-10-28 21:38:48,072 [restartedMain] INFO  com.ao.ScanCommunicateApplication:73 - 智能插座服务系统启动................................
+2018-10-28 21:38:48,102 [restartedMain] INFO  a.s.p.config.cmd.AllProtocolCommandConfigList:105 - 系统参数protocol.configpath没有配置，跳过指令配置文件的加载
+2018-10-28 21:38:48,124 [restartedMain] INFO  a.s.protocol.config.ProtocolConfigCollection:132 - 添加协议配置（智能插座协议1.0）(id:256)(port:9100)(类型:tcp)
+2018-10-28 21:38:48,125 [restartedMain] INFO  a.s.protocol.config.ProtocolConfigCollection:143 - 系统参数protocol.configpath没有配置，跳过协议配置文件的加载
+2018-10-28 21:38:48,141 [restartedMain] INFO  ahh.swallowIotServer.IotServer:165 - 
+2018-10-28 21:38:48,141 [restartedMain] INFO  ahh.swallowIotServer.IotServer:166 - 
+2018-10-28 21:38:48,142 [restartedMain] INFO  ahh.swallowIotServer.IotServer:167 - 
+2018-10-28 21:38:48,142 [restartedMain] INFO  ahh.swallowIotServer.IotServer:168 - *************************打印协议配置信息**********************************
+2018-10-28 21:38:48,142 [restartedMain] INFO  ahh.swallowIotServer.IotServer:169 - 
+2018-10-28 21:38:48,143 [restartedMain] INFO  ahh.swallowIotServer.IotServer:294 - 协议名智能插座协议1.0  协议ID(256)  端口(9100)  协议类型(HasHeaderProtocolAnnotationConfig)
+2018-10-28 21:38:48,144 [restartedMain] INFO  ahh.swallowIotServer.IotServer:296 - ****************************************************************
+2018-10-28 21:38:48,144 [restartedMain] INFO  ahh.swallowIotServer.IotServer:156 - 
+2018-10-28 21:38:48,145 [restartedMain] INFO  ahh.swallowIotServer.IotServer:158 - 数据校验处理器Is1CrcHandler 上行字段crcBit 下行字段crcBit
+2018-10-28 21:38:48,145 [restartedMain] INFO  ahh.swallowIotServer.IotServer:160 - 
+2018-10-28 21:38:48,145 [restartedMain] INFO  ahh.swallowIotServer.IotServer:163 - ###############上行包头#######################
+2018-10-28 21:38:48,146 [restartedMain] INFO  ahh.swallowIotServer.IotServer:164 - 	指令识别字段:cmd
+2018-10-28 21:38:48,146 [restartedMain] INFO  ahh.swallowIotServer.IotServer:165 - 	上行指令识别处理器Is1ConfirmCmdhandler
+2018-10-28 21:38:48,147 [restartedMain] INFO  ahh.swallowIotServer.IotServer:168 - 	字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,148 [restartedMain] INFO  ahh.swallowIotServer.IotServer:168 - 	字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,148 [restartedMain] INFO  ahh.swallowIotServer.IotServer:170 - ###############end上行包头#######################
+2018-10-28 21:38:48,149 [restartedMain] INFO  ahh.swallowIotServer.IotServer:173 - ###############下行包头######################
+2018-10-28 21:38:48,149 [restartedMain] INFO  ahh.swallowIotServer.IotServer:174 - 	指令识别字段:null
+2018-10-28 21:38:48,151 [restartedMain] INFO  ahh.swallowIotServer.IotServer:177 - 	字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,152 [restartedMain] INFO  ahh.swallowIotServer.IotServer:177 - 	字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,152 [restartedMain] INFO  ahh.swallowIotServer.IotServer:180 - ###############end下行包头######################
+2018-10-28 21:38:48,153 [restartedMain] INFO  ahh.swallowIotServer.IotServer:301 - ----打印指令集------------------------------------------------------
+2018-10-28 21:38:48,153 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	上行指令:(心跳上行) ID(161)
+2018-10-28 21:38:48,155 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,179 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:len 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,180 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:state 类型:ConstShortFieldConfig 是否定长:是 长度:2 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,180 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,181 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,181 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,181 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	上行指令:(状态上行) ID(162)
+2018-10-28 21:38:48,181 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,182 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,182 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:state 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,183 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,184 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,185 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,185 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	上行指令:(开始充电上行) ID(163)
+2018-10-28 21:38:48,186 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,186 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,186 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,186 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,187 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,187 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	上行指令:(充电完成上行) ID(164)
+2018-10-28 21:38:48,187 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,187 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,188 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:minutes 类型:ConstShortFieldConfig 是否定长:是 长度:2 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,188 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:energy 类型:ConstIntFieldConfig 是否定长:是 长度:4 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,188 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,188 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,188 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,191 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	上行指令:(获取账单上行) ID(165)
+2018-10-28 21:38:48,191 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,192 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,192 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:minutes 类型:ConstShortFieldConfig 是否定长:是 长度:2 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,192 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:energy 类型:ConstIntFieldConfig 是否定长:是 长度:4 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,193 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,193 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,193 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,193 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	上行指令:(恢复充电上行) ID(166)
+2018-10-28 21:38:48,194 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,194 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,194 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,194 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,195 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,195 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	上行指令:(成功反馈上行) ID(170)
+2018-10-28 21:38:48,195 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,195 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,196 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,196 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,196 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,197 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	上行指令:(错误反馈上行) ID(171)
+2018-10-28 21:38:48,197 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,198 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,198 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,198 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,198 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,199 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	上行指令:(注册TCP总机上行) ID(205)
+2018-10-28 21:38:48,200 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,201 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:deviceCode 类型:ConstLongFieldConfig 是否定长:是 长度:8 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,202 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,203 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,203 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,203 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(设备回应心跳下行包) ID(209)
+2018-10-28 21:38:48,203 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,204 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,204 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,204 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,204 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,206 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd crcBit eoi
+2018-10-28 21:38:48,206 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,206 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(获取设备状态下行) ID(178)
+2018-10-28 21:38:48,206 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,207 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,207 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,207 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,207 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,208 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,208 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd addr crcBit eoi
+2018-10-28 21:38:48,208 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,209 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(设备回应状态下行指令包) ID(210)
+2018-10-28 21:38:48,209 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,209 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,209 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,210 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,210 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,210 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,211 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd addr crcBit eoi
+2018-10-28 21:38:48,211 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,284 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(开始充电下行) ID(179)
+2018-10-28 21:38:48,285 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,293 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,293 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,293 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,294 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:minutes 类型:ConstShortFieldConfig 是否定长:是 长度:2 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,299 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,300 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,300 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd addr minutes crcBit eoi
+2018-10-28 21:38:48,300 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,301 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(中断充电下行) ID(180)
+2018-10-28 21:38:48,301 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,301 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,301 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,302 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,302 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,302 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,302 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd addr crcBit eoi
+2018-10-28 21:38:48,302 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,302 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(设备回应充电完成下行指令包) ID(212)
+2018-10-28 21:38:48,303 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,303 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,303 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,303 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,303 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,304 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,304 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd addr crcBit eoi
+2018-10-28 21:38:48,304 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,304 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(获取账单下行) ID(181)
+2018-10-28 21:38:48,304 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,304 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,305 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,306 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,306 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,307 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,307 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd addr crcBit eoi
+2018-10-28 21:38:48,307 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,308 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(恢复充电下行) ID(182)
+2018-10-28 21:38:48,308 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,308 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,308 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,309 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,312 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,312 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,313 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd addr crcBit eoi
+2018-10-28 21:38:48,313 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,313 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(设置报警值下行) ID(183)
+2018-10-28 21:38:48,313 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,314 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,314 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,314 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:addr 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,315 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:max 类型:ConstIntFieldConfig 是否定长:是 长度:4 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,315 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:min 类型:ConstIntFieldConfig 是否定长:是 长度:4 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,315 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,316 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,318 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd addr max min crcBit eoi
+2018-10-28 21:38:48,318 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,318 [restartedMain] INFO  ahh.swallowIotServer.IotServer:239 - 	下行指令:(注册TCP总机下行) ID(221)
+2018-10-28 21:38:48,319 [restartedMain] INFO  ahh.swallowIotServer.IotServer:240 - 	------------------------------------------------------
+2018-10-28 21:38:48,319 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:soi 类型:VarStartCharFieldConfig 是否定长:否 长度:-1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,319 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:cmd 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,320 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:authResult 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:是 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,320 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:crcBit 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:null 依赖字段:null 
+2018-10-28 21:38:48,320 [restartedMain] INFO  ahh.swallowIotServer.IotServer:245 - 		字段名:eoi 类型:ConstByteFieldConfig 是否定长:是 长度:1 需要CRC:否 固定值:87 依赖字段:null 
+2018-10-28 21:38:48,321 [restartedMain] INFO  ahh.swallowIotServer.IotServer:255 - 		字段编码次序为: soi cmd authResult crcBit eoi
+2018-10-28 21:38:48,321 [restartedMain] INFO  ahh.swallowIotServer.IotServer:258 - 	------------------------------------------------------
+2018-10-28 21:38:48,321 [restartedMain] INFO  ahh.swallowIotServer.IotServer:307 - ----end打印指令集------------------------------------------------------
+2018-10-28 21:38:48,321 [restartedMain] INFO  ahh.swallowIotServer.IotServer:308 - end************************************************************
+2018-10-28 21:38:48,321 [restartedMain] INFO  ahh.swallowIotServer.IotServer:176 - 
+2018-10-28 21:38:48,321 [restartedMain] INFO  ahh.swallowIotServer.IotServer:177 - *************************end打印协议配置信息**********************************
+2018-10-28 21:38:48,321 [restartedMain] INFO  ahh.swallowIotServer.IotServer:178 - 
+2018-10-28 21:38:48,322 [restartedMain] INFO  ahh.swallowIotServer.IotServer:179 - 
+2018-10-28 21:38:48,323 [restartedMain] INFO  ahh.swallowIotServer.IotServer:180 - 
+2018-10-28 21:38:48,323 [restartedMain] INFO  a.s.dispatcher.DispatcherMessageConfigCollection:45 - 开始加载DispatcherMessageConfig.....
+2018-10-28 21:38:48,329 [restartedMain] INFO  a.s.dispatcher.DispatcherMessageConfigCollection:53 - 搜索到ProtocolDispatcher配置com.ao.scanCommunicate.protocol.Is1Dispatcher
+2018-10-28 21:38:48,330 [restartedMain] INFO  ahh.swallowIotServer.protocol.ProtocolCollection:47 - 开始初始化协议........
+2018-10-28 21:38:48,332 [restartedMain] INFO  ahh.swallowIotServer.protocol.ProtocolCollection:59 - 完成协议(name=智能插座协议1.0)(id=256)(port=9100)的初始化
+2018-10-28 21:38:48,610 [restartedMain] INFO  com.ao.ScanCommunicateApplication:87 - 智能插座服务系统启动完成................................

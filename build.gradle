@@ -6,6 +6,7 @@ buildscript {
 		maven { url "https://repo.spring.io/snapshot" }
 		maven { url "https://repo.spring.io/milestone" }
 		mavenCentral()
+		
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -26,6 +27,8 @@ repositories {
 	maven { url "https://repo.spring.io/milestone" }
 	maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
 	mavenCentral()
+	// 龙创私有仓库，存放了龙创自有的技术架构的jar包
+	maven { url 'http://192.168.1.45:9081/repository/gdlc/' }
 }
 
 ext {
@@ -34,7 +37,7 @@ ext {
 
 dependencies {
 	compile project(':ScanBisServer')
-	compile project(':swallowIotServer')
+	compile ('com.ao:swallowIotServer:0.0.1-SNAPSHOT')
 	
 	compile('org.springframework.statemachine:spring-statemachine-starter')
 	compile('org.springframework.statemachine:spring-statemachine-data-mongodb')
